@@ -7,5 +7,15 @@
   </head>
   <body>
     <h1>This is list of Articles</h1>
+
+    <div class="articles">
+      {% for article in articles %}
+      <div class="article">
+        <a href="/articles/{{article.slug}}"><h2>{{article.title}}</h2></a>
+        <p>{{article.body}}</p>
+        <p>{{article.date}}</p>
+      </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
