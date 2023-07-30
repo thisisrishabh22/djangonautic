@@ -10,3 +10,8 @@ class Article(models.Model):
   def __str__(self) -> str:
     return self.title
 
+  def snippet(self) -> str:
+    concat = ""
+    if len(self.body) > 50:
+      concat = "..."
+    return self.body[:50]+concat
